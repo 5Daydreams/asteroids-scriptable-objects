@@ -1,6 +1,6 @@
 # asteroids-scriptable-objects
 
-# Nelson Kiyoshi Kossuga
+* Assignement - Nelson Kiyoshi Kossuga
 
 Adaptations:
 Scriptable event architecture for score and powerups;
