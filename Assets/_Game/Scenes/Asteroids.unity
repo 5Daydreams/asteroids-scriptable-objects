@@ -123,6 +123,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &952188783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7101966234334493682, guid: c71243f12cdfc2a4282f1805a6098327, type: 3}
+  m_PrefabInstance: {fileID: 7101966234704262264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &952188784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952188783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656a42160ec8bee4e96dbec608178565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startOnEnable: 0
+  _timeElapsedScriptable: {fileID: 0}
+  _timeElapsed: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,14 +332,6 @@ PrefabInstance:
     - target: {fileID: 2970632031999273637, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
-      propertyPath: _rotationPowerSimple
-      value: 5.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
-      propertyPath: _throttlePowerSimple
-      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 2970632031999273639, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

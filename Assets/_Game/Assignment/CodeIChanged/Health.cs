@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using _Code.CustomEvents.VoidEvent;
+using UnityEngine;
 
 namespace Ship
 {
     public class Health : MonoBehaviour
     {
+        [SerializeField] private VoidEvent _playerDead;
         private int _health = 10;
         
         private const int MIN_HEALTH = 0;
@@ -12,6 +14,11 @@ namespace Ship
         { 
             Debug.Log("Took some damage");
             _health = Mathf.Max(MIN_HEALTH, _health - damage);
+
+            if (_health == MIN_HEALTH)
+            {
+                _playerDead.Raise();
+            }
         }
     }
 }

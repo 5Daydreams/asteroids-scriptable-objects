@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2970632031999273633}
   - component: {fileID: 6578066716522484772}
   - component: {fileID: 2970632031999273632}
+  - component: {fileID: 1915628020809357811}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -49,10 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ca54af3d6ff174994b183b53e8dc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throttlePower: {fileID: 11400000, guid: beb4542c9c678f14cb3e3a74aead4314, type: 2}
-  _rotationPower: {fileID: 11400000, guid: eb6f17e4493560c4b9750572ccc4f906, type: 2}
-  _throttlePowerSimple: 0
-  _rotationPowerSimple: 0
+  _throttlePowerSimple: 1
+  _rotationPowerSimple: 0.3
+  _maxSpeed: 1
 --- !u!114 &2970632031999273633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,12 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8049130da1c3b374a8385482151b2e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onHealthChangedEvent: {fileID: 11400000, guid: 1c89cb8edd31962449ecaa94187a07fc, type: 2}
-  _healthRef:
-    _intVariable: {fileID: 11400000, guid: 40cfb1e1b58e0f84a966e03698c56110, type: 2}
-    _simpleValue: 12
-    _useSimple: 0
-  _healthObservable: {fileID: 11400000, guid: a29c193f4c943534ab4728aacaf9839a, type: 2}
+  _currentHealth: {fileID: 0}
+  _maxHealth: 12
 --- !u!114 &6578066716522484772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a0cd419e68444499cf96316af2fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerDead: {fileID: 0}
 --- !u!50 &2970632031999273632
 Rigidbody2D:
   serializedVersion: 4
@@ -97,13 +94,95 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.8
-  m_AngularDrag: 2
+  m_AngularDrag: 5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1915628020809357811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970632031999273636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e66c974e35c6a94192c498316a5103b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputList:
+  - Description: Forward
+    InputKey: w
+    InputHeld:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2970632031999273638}
+          m_TargetAssemblyTypeName: Ship.Engine, Assembly-CSharp
+          m_MethodName: Throttle
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    InputTapped:
+      m_PersistentCalls:
+        m_Calls: []
+    InputReleased:
+      m_PersistentCalls:
+        m_Calls: []
+  - Description: Right
+    InputKey: d
+    InputHeld:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2970632031999273638}
+          m_TargetAssemblyTypeName: Ship.Engine, Assembly-CSharp
+          m_MethodName: SteerRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    InputTapped:
+      m_PersistentCalls:
+        m_Calls: []
+    InputReleased:
+      m_PersistentCalls:
+        m_Calls: []
+  - Description: Left
+    InputKey: a
+    InputHeld:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2970632031999273638}
+          m_TargetAssemblyTypeName: Ship.Engine, Assembly-CSharp
+          m_MethodName: SteerLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    InputTapped:
+      m_PersistentCalls:
+        m_Calls: []
+    InputReleased:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &2970632032652603877
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2970632033307266043}
   - component: {fileID: 2970632033307266020}
+  - component: {fileID: 318560394908439482}
   m_Layer: 0
   m_Name: Ship_Gun
   m_TagString: Untagged
@@ -259,6 +339,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laserPrefab: {fileID: 5567069101288871488, guid: 2b9ecba75bf344a41ae8623bcd4fdab6, type: 3}
+  _shootCooldown: 0.2
+--- !u!114 &318560394908439482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970632033307266042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e66c974e35c6a94192c498316a5103b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputList:
+  - Description: Fire
+    InputKey: space
+    InputHeld:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2970632033307266020}
+          m_TargetAssemblyTypeName: Ship.Gun, Assembly-CSharp
+          m_MethodName: TryShoot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    InputTapped:
+      m_PersistentCalls:
+        m_Calls: []
+    InputReleased:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &3617658530249206207
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,3 +419,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a0cd419e68444499cf96316af2fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerDead: {fileID: 11400000, guid: 9c394220d330e3943b214ae8a5e5ca3f, type: 2}

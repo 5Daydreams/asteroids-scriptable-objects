@@ -1,4 +1,5 @@
-using DefaultNamespace.ScriptableEvents;
+using Assignment.ScriptableSimpleValues.SimpleValues;
+using ScriptableEvents;
 using UnityEngine;
 using Variables;
 using Random = UnityEngine.Random;
@@ -9,6 +10,7 @@ namespace Asteroids
     public class Asteroid : MonoBehaviour
     {
         [SerializeField] private ScriptableEventInt _onAsteroidDestroyed;
+        [SerializeField] private IntValue _score;
         
         [Header("Config:")]
         [SerializeField] private float _minForce;
@@ -46,25 +48,8 @@ namespace Asteroids
 
         private void HitByLaser()
         {
-            _onAsteroidDestroyed.Raise(_instanceId);
-            Destroy(gameObject);
-        }
-
-        // TODO Can we move this to a single listener, something like an AsteroidDestroyer?
-        public void OnHitByLaser(IntReference asteroidId)
-        {
-            if (_instanceId == asteroidId.GetValue())
-            {
-                Destroy(gameObject);
-            }
-        }
-        
-        public void OnHitByLaserInt(int asteroidId)
-        {
-            if (_instanceId == asteroidId)
-            {
-                Destroy(gameObject);
-            }
+            _onAsteroidDestroyed.Raise(_score.Value);
+            Destroy(this.gameObject);
         }
         
         private void SetDirection()
