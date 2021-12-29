@@ -3,4 +3,4 @@
 * Assignement - Nelson Kiyoshi Kossuga
 
 Adaptations:
-Scriptable event architecture for score and powerups;
+Scriptable event architecture for score and player health in the UI;
