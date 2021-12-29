@@ -213,6 +213,9 @@ GameObject:
   - component: {fileID: 7101966235281579914}
   - component: {fileID: 7101966235281579916}
   - component: {fileID: 7101966235281579915}
+  - component: {fileID: 7915030878861219544}
+  - component: {fileID: 7795259594538345631}
+  - component: {fileID: 6056001436506894762}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -267,7 +270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Asteroids Destoyed: 100'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -336,6 +339,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7915030878861219544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101966235281579913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7233bc74c04c609f0cfd38b019bf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trackable: {fileID: 11400000, guid: 9499c870ba615544da8c557e5fbe365e, type: 2}
+  _callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7795259594538345631}
+        m_TargetAssemblyTypeName: Assignment._Code.UI.TextFieldUpdater, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7795259594538345631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101966235281579913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b90e9d7e28d95d489b3c484b342b39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 7101966235281579915}
+  _descriptionText: 'Score:'
+--- !u!114 &6056001436506894762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101966235281579913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b8f09ae7c24da19a15cb1b403ad85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventNoPayload: {fileID: 0}
+  _responseNoPayload:
+    m_PersistentCalls:
+      m_Calls: []
+  _event: {fileID: 11400000, guid: 6194a1f60d68f9f4da5519ce74b63a58, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 9499c870ba615544da8c557e5fbe365e, type: 2}
+        m_TargetAssemblyTypeName: Assignment._Code.ScriptableSimpleValues.TrackableValue.TrackableInt,
+          Assembly-CSharp
+        m_MethodName: AddToValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7101966235362614042
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +683,8 @@ GameObject:
   - component: {fileID: 7101966235834179331}
   - component: {fileID: 7101966235834179333}
   - component: {fileID: 7101966235834179332}
+  - component: {fileID: 4670313696265763879}
+  - component: {fileID: 5400316624398318614}
   m_Layer: 5
   m_Name: HealthText
   m_TagString: Untagged
@@ -728,6 +808,48 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4670313696265763879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101966235834179330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7233bc74c04c609f0cfd38b019bf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trackable: {fileID: 11400000, guid: ea72422846ff76142a9e54a6622d18b5, type: 2}
+  _callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5400316624398318614}
+        m_TargetAssemblyTypeName: Assignment._Code.UI.TextFieldUpdater, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5400316624398318614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101966235834179330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b90e9d7e28d95d489b3c484b342b39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 7101966235834179332}
+  _descriptionText: 'Health:'
 --- !u!1 &7297531129509650239
 GameObject:
   m_ObjectHideFlags: 0

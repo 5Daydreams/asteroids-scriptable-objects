@@ -1,19 +1,16 @@
+using TMPro;
 using UnityEngine;
 
 namespace Assignment._Code.UI
 {
     public class TextFieldUpdater : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [SerializeField] private TextMeshProUGUI _text;
+        [SerializeField] private string _descriptionText;
 
-        // Update is called once per frame
-        void Update()
+        public void RefreshText(int value)
         {
-        
+            _text.text = _descriptionText + " " + value.ToString();
         }
     }
 }
