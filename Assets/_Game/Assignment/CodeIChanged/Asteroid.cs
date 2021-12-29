@@ -21,6 +21,7 @@ namespace Assignment.CodeIChanged
 
         [Header("References:")]
         [SerializeField] private Transform _shape;
+        [SerializeField] private Transform _shape;
 
         private Rigidbody2D _rigidbody;
         private Vector3 _direction;
