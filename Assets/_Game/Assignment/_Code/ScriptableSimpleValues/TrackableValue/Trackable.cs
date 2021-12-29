@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Assignment.ScriptableSimpleValues.TrackableValue
+namespace Assignment._Code.ScriptableSimpleValues.TrackableValue
 {
     public abstract class Trackable<T> : ScriptableObject
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Assignment.SimpleScripts.BasicConditionTriggers
+namespace Assignment._Code.CollisionScripts
 {
     [RequireComponent(typeof(Collider))]
     public class ColliderEnterCallback : MonoBehaviour

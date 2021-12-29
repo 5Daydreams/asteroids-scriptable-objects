@@ -1,9 +1,7 @@
-using System;
-using TMPro;
+using Ship;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
-namespace Ship
+namespace Assignment.CodeIChanged
 {
     public class Gun : MonoBehaviour
     {

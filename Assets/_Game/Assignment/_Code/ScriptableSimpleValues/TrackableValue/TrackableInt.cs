@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assignment.ScriptableSimpleValues.TrackableValue
+namespace Assignment._Code.ScriptableSimpleValues.TrackableValue
 {
     [CreateAssetMenu(fileName = "IntTrackableValue",menuName = "CustomScriptables/TrackableValue/Int")]
     public class TrackableInt : Trackable<int>

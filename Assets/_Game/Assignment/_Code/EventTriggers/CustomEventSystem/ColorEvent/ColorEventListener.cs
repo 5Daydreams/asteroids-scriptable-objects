@@ -1,7 +1,7 @@
-﻿using _Code.CustomEvents.BaseEvent;
+﻿using Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent;
 using UnityEngine;
 
-namespace _Code.CustomEvents.ColorEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.ColorEvent
 {
     public class ColorEventListener : BaseGameEventListener<Color, ColorEvent, UnityColorEvent>
     {

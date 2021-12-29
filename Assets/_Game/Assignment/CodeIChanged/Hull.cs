@@ -1,10 +1,7 @@
-using System;
-using Assignment.ScriptableSimpleValues.TrackableValue;
-using ScriptableEvents;
+using Assignment._Code.ScriptableSimpleValues.TrackableValue;
 using UnityEngine;
-using Variables;
 
-namespace Ship
+namespace Assignment.CodeIChanged
 {
     public class Hull : MonoBehaviour
     {

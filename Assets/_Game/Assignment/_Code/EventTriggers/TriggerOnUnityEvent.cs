@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Assignment.SimpleScripts.BasicConditionTriggers
+namespace Assignment._Code.EventTriggers
 {
     public class TriggerOnUnityEvent : MonoBehaviour
     {

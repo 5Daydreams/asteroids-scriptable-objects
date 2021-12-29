@@ -1,7 +1,7 @@
-using Assignment.ScriptableSimpleValues.SimpleValues;
+using Assignment._Code.ScriptableSimpleValues.SimpleValues;
 using UnityEngine;
 
-namespace Assignment.Timer
+namespace Assignment._Code.Timer
 {
     public class Stopwatch : MonoBehaviour
     {

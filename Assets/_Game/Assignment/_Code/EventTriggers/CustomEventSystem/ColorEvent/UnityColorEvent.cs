@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace _Code.CustomEvents.ColorEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.ColorEvent
 {
     [System.Serializable] public class UnityColorEvent : UnityEvent<Color>
     {

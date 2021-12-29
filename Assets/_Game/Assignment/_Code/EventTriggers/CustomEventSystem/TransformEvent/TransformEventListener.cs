@@ -1,7 +1,7 @@
-using _Code.CustomEvents.BaseEvent;
+using Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent;
 using UnityEngine;
 
-namespace _Code.CustomEvents.TransformEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.TransformEvent
 {
     public class TransformEventListener : BaseGameEventListener<Transform, TransformEvent, UnityTransformEvent>
     {

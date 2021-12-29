@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Assignment.ScriptableSimpleValues.TrackableValue.TrackableObservers
+namespace Assignment._Code.ScriptableSimpleValues.TrackableValue.TrackableObservers
 {
     public class TrackableObserver<T> : MonoBehaviour
     {

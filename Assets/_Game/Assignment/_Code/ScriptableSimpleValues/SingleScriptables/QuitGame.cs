@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assignment.ScriptableSimpleValues.SingleScriptables
+namespace Assignment._Code.ScriptableSimpleValues.SingleScriptables
 {
     [CreateAssetMenu(fileName = "QuitGame", menuName = "CustomScriptables/QuitGame")]
     public class QuitGame : ScriptableObject

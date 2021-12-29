@@ -1,10 +1,9 @@
-using Assignment.ScriptableSimpleValues.SimpleValues;
+using Assignment._Code.ScriptableSimpleValues.SimpleValues;
 using ScriptableEvents;
 using UnityEngine;
-using Variables;
 using Random = UnityEngine.Random;
 
-namespace Asteroids
+namespace Assignment.CodeIChanged
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Asteroid : MonoBehaviour

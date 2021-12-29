@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assignment.ScriptableSimpleValues.SimpleValues
+namespace Assignment._Code.ScriptableSimpleValues.SimpleValues
 {
     public abstract class SimpleValue<T> : ScriptableObject
     {

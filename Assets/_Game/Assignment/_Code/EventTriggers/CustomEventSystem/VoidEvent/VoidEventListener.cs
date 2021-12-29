@@ -1,6 +1,6 @@
-﻿using _Code.CustomEvents.BaseEvent;
+﻿using Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent;
 
-namespace _Code.CustomEvents.VoidEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.VoidEvent
 {
     public class VoidEventListener : BaseGameEventListener<Void, VoidEvent, UnityVoidEvent>
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assignment.ScriptableSimpleValues.SingleScriptables
+namespace Assignment._Code.ScriptableSimpleValues.SingleScriptables
 {
     [CreateAssetMenu(menuName = "CustomScriptables/DebugMessager")]
     public class EventLog : ScriptableObject

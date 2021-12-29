@@ -1,7 +1,7 @@
-﻿using _Code.CustomEvents.BaseEvent;
+﻿using Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent;
 using UnityEngine;
 
-namespace _Code.CustomEvents.VoidEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.VoidEvent
 {
     [CreateAssetMenu(menuName = "CustomScriptables/Events/VoidEvent", fileName = "NewVoidEvent")]
     public class VoidEvent : BaseGameEvent<Void>

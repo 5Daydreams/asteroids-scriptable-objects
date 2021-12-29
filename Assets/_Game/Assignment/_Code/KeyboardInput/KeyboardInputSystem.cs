@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _Code.Input
+namespace Assignment._Code.KeyboardInput
 {
     public class KeyboardInputSystem : MonoBehaviour
     {

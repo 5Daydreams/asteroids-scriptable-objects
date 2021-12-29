@@ -1,7 +1,7 @@
-﻿using _Code.CustomEvents.VoidEvent;
+﻿using Assignment._Code.EventTriggers.CustomEventSystem.VoidEvent;
 using UnityEngine;
 
-namespace Ship
+namespace Assignment.CodeIChanged
 {
     public class Health : MonoBehaviour
     {

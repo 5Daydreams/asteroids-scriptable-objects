@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assignment.SimpleScripts
+namespace Assignment._Code.CollisionScripts
 {
     public class DestroyTogether : MonoBehaviour
     {

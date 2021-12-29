@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c279a52dec3654290252481c27e37f, type: 3}
-  m_Name: AsteroidScore
+  m_Script: {fileID: 11500000, guid: 6a2f22800a934a3ca39f34f7fdd42c41, type: 3}
+  m_Name: PlayerHealth
   m_EditorClassIdentifier: 
-  Value: 5
+  _value: 0
+  CallbackOnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []

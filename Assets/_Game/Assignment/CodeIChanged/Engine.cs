@@ -1,8 +1,6 @@
-using UnityEditor.VersionControl;
 using UnityEngine;
-using Variables;
 
-namespace Ship
+namespace Assignment.CodeIChanged
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Engine : MonoBehaviour

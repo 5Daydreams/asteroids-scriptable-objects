@@ -1,7 +1,7 @@
-﻿using _Code.CustomEvents.BaseEvent;
+﻿using Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent;
 using UnityEngine.Events;
 
-namespace _Code.CustomEvents.FloatEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.FloatEvent
 {
     public class FloatEventListener : BaseGameEventListener<float, FloatEvent, UnityEvent<float>>
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _Code.CustomEvents.TransformEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.TransformEvent
 {
     [System.Serializable] public class UnityTransformEvent : UnityEvent<Transform>
     {

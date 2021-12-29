@@ -1,7 +1,7 @@
-﻿using _Code.CustomEvents.BaseEvent;
+﻿using Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent;
 using UnityEngine.Events;
 
-namespace _Code.CustomEvents.IntEvent
+namespace Assignment._Code.EventTriggers.CustomEventSystem.IntEvent
 {
     public class IntEventListener : BaseGameEventListener<int, IntEvent, UnityEvent<int>>
     {

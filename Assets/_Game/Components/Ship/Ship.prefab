@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8049130da1c3b374a8385482151b2e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: {fileID: 0}
+  _currentHealth: {fileID: 11400000, guid: ea72422846ff76142a9e54a6622d18b5, type: 2}
   _maxHealth: 12
 --- !u!114 &6578066716522484772
 MonoBehaviour:
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a0cd419e68444499cf96316af2fa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerDead: {fileID: 0}
+  _playerDead: {fileID: 11400000, guid: 9c394220d330e3943b214ae8a5e5ca3f, type: 2}
 --- !u!50 &2970632031999273632
 Rigidbody2D:
   serializedVersion: 4

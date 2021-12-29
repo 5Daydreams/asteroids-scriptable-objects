@@ -1,4 +1,4 @@
-﻿namespace _Code.CustomEvents.BaseEvent
+﻿namespace Assignment._Code.EventTriggers.CustomEventSystem.BaseEvent
 {
     public interface IGameEventListener<T>
     {
