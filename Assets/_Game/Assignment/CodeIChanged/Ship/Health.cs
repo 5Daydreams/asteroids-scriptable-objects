@@ -1,4 +1,6 @@
-﻿using Assignment._Code.EventTriggers.CustomEventSystem.VoidEvent;
+﻿using System;
+using Assignment._Code.EventTriggers.CustomEventSystem.VoidEvent;
+using Assignment._Code.ScriptableSimpleValues.TrackableValue;
 using UnityEngine;
 
 namespace Assignment.CodeIChanged
@@ -6,16 +8,31 @@ namespace Assignment.CodeIChanged
     public class Health : MonoBehaviour
     {
         [SerializeField] private VoidEvent _playerDead;
-        private int _health = 10;
-        
-        private const int MIN_HEALTH = 0;
-        
-        public void TakeDamage(int damage)
-        { 
-            Debug.Log("Took some damage");
-            _health = Mathf.Max(MIN_HEALTH, _health - damage);
+        [SerializeField] private TrackableInt _currentPlayerHealthReference;
+        [SerializeField] private int _maxHealth;
+        private int _currentHealth;
 
-            if (_health == MIN_HEALTH)
+        private const int MIN_HEALTH = 0;
+
+        private void OnEnable()
+        {
+            _currentPlayerHealthReference.CallbackOnValueChanged.AddListener(OnHealthChanged);
+            _currentPlayerHealthReference.Value = _maxHealth;
+        }
+
+        private void OnDisable()
+        {
+            _currentPlayerHealthReference.CallbackOnValueChanged.RemoveListener(OnHealthChanged);
+        }
+
+        private void OnHealthChanged(int newHealthValue)
+        {
+            _currentPlayerHealthReference.Value = Mathf.Clamp(newHealthValue, MIN_HEALTH, _maxHealth);
+            _currentHealth = _currentPlayerHealthReference.Value;
+            
+            Debug.Log("Current Health:" + _currentHealth );
+
+            if (_currentHealth == MIN_HEALTH)
             {
                 _playerDead.Raise();
             }

@@ -1,6 +1,7 @@
 using Assignment._Code.ScriptableSimpleValues.SimpleValues;
 using ScriptableEvents;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace Assignment.CodeIChanged
@@ -21,7 +22,7 @@ namespace Assignment.CodeIChanged
 
         [Header("References:")]
         [SerializeField] private Transform _shape;
-        [SerializeField] private Transform _shape;
+        [SerializeField] private UnityEvent _beforeDestroy;
 
         private Rigidbody2D _rigidbody;
         private Vector3 _direction;
@@ -49,6 +50,7 @@ namespace Assignment.CodeIChanged
         private void HitByLaser()
         {
             _onAsteroidDestroyed.Raise(_score.Value);
+            _beforeDestroy.Invoke();
             Destroy(this.gameObject);
         }
         

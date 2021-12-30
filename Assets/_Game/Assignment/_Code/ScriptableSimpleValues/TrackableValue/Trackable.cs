@@ -8,7 +8,7 @@ namespace Assignment._Code.ScriptableSimpleValues.TrackableValue
         [SerializeField] protected T _value;
         [HideInInspector] public UnityEvent<T> CallbackOnValueChanged;
 
-        public T Value
+        public virtual T Value
         {
             get => _value;
             set
